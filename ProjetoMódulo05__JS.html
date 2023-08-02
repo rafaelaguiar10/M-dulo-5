@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjetoMódulo05__JS</title>
+</head>
+<script>
+    alert("Olá. Sou um computador que irá gerar um número aleatório entre 0 e 100")
+
+const min = 0;
+const max = 100;
+const randomNum = Math.floor(Math.random() * (max - min + 1) + min);
+
+do {
+    var numeroUsuario = Number(prompt("Qual seu número palpite entre '0 e 100'?"))
+    if (randomNum < numeroUsuario) {
+        alert(numeroUsuario + ". " + "O número digitado é MAIOR do que o número que foi gerado. Tente novamente")
+    } else if (randomNum > numeroUsuario) {
+        alert(numeroUsuario + ". " + "O número digitado é MENOR do que o número que foi gerado. Tente novamente")
+    } else if (randomNum === numeroUsuario) { 
+        alert("O número escolhido é: " + numeroUsuario + ". " + "O número gerado é: " + randomNum)
+    }
+
+} while (randomNum !== numeroUsuario);
+
+</script>
+
+<body>
+    
+</body>
+</html>
